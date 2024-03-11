@@ -1,1 +1,5 @@
-console.log("Hello there");
+const sum = (a, b) => {
+  return a + b;
+};
+
+module.exports = sum;
