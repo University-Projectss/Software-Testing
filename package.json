@@ -1,0 +1,11 @@
+{
+  "name": "testare",
+  "version": "1.0.0",
+  "description": "Uni project to learn testing with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
