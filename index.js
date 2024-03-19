@@ -1,20 +1,14 @@
 //Testare functionala, structurala si cu mutatii
-const readline = require("node:readline").createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-const getInput = async (prompt = "") => {
-  return new Promise((resolve) => {
-    readline.question(prompt, (answer) => {
-      resolve(answer);
-    });
-  });
-};
 
 // #1 Implementare exemplu de testare functionala din cursul 1
-const findNumberInString = (n, bigString, charToSearch) => {
-  if (String(bigString).length !== n || typeof n !== "number") return null;
+const findChar = (n, bigString, charToSearch) => {
+  if (
+    n < 1 ||
+    n > 20 ||
+    String(bigString).length !== n ||
+    typeof n !== "number"
+  )
+    return null;
 
   const pos = String(bigString).indexOf(charToSearch);
 
@@ -25,6 +19,9 @@ const findNumberInString = (n, bigString, charToSearch) => {
   }
 };
 
-module.exports({
-  findNumberInString,
-});
+//Testare structurala
+//to do
+
+module.exports = {
+  findChar,
+};

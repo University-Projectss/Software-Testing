@@ -1,4 +1,4 @@
-const findNumberInString = require("./index");
+const { findChar } = require("./index");
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -116,10 +116,32 @@ function generateRandomString(length) {
   return randomString;
 }
 
-test("Find number in string", () => {
+test("Find character in string", () => {
   let n, bigString, charToSearch;
 
   n = getRandomInt(-100000, 0);
   bigString = generateRandomString(n);
-  expect(findNumberInString(n));
+  charToSearch = generateRandomString(1);
+  expect(findChar(n, bigString, charToSearch)).toBe(null);
+
+  n = getRandomInt(21, 100000);
+  bigString = generateRandomString(n);
+  charToSearch = generateRandomString(1);
+  expect(findChar(n, bigString, charToSearch)).toBe(null);
+
+  n = getRandomInt(1, 20);
+  bigString = generateRandomString(n);
+  let pos = getRandomInt(0, n - 1);
+  charToSearch = bigString[pos];
+  expect(findChar(n, bigString, charToSearch)).toBe(pos);
+
+  n = getRandomInt(1, 20);
+  bigString = generateRandomString(n);
+
+  charToSearch = generateRandomString(1);
+  while (bigString.includes(charToSearch)) {
+    charToSearch = generateRandomString(1);
+  }
+
+  expect(findChar(n, bigString, charToSearch)).toBe("Character not found.");
 });
