@@ -1,6 +1,6 @@
 //Testare functionala, structurala si cu mutatii
 
-// #1 Implementare exemplu de testare functionala din cursul 1
+// Gaseste un caracter intr un sir dat de lungime n
 const findChar = (n, bigString, charToSearch) => {
   if (
     n < 1 ||
@@ -19,9 +19,33 @@ const findChar = (n, bigString, charToSearch) => {
   }
 };
 
-//Testare structurala
-//to do
+// Calculeaza suma numerelor pare si suma cifrelor numerelor impare dintr-un array dat
+const computeSum = (numbersArray) => {
+  if (numbersArray.length === 0) {
+    return null;
+  }
+
+  let sumEven = 0,
+    sumOdd = 0;
+
+  for (let n of numbersArray) {
+    n = Math.floor(n); //lucram doar cu numere intregi
+    if (n % 2 == 0) {
+      sumEven += n;
+    } else {
+      while (n) {
+        sumOdd += n % 10;
+        n = Math.floor(n / 10);
+      }
+    }
+  }
+
+  return { sumEven, sumOdd };
+};
+
+computeSum([1, 2, 3, 4]);
 
 module.exports = {
   findChar,
+  computeSum,
 };

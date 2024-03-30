@@ -1,4 +1,4 @@
-const { findChar } = require("./index");
+const { findChar, computeSum } = require("./index");
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -116,7 +116,8 @@ function generateRandomString(length) {
   return randomString;
 }
 
-test("Find character in string", () => {
+//Testare Functionala
+test("Functional Testing", () => {
   let n, bigString, charToSearch;
 
   n = getRandomInt(-100000, 0);
@@ -142,6 +143,12 @@ test("Find character in string", () => {
   while (bigString.includes(charToSearch)) {
     charToSearch = generateRandomString(1);
   }
-
   expect(findChar(n, bigString, charToSearch)).toBe("Character not found.");
+});
+
+test("Structural Testing", () => {
+  let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  expect(computeSum([])).toBe(null);
+  expect(computeSum(testArray)).toStrictEqual({ sumEven: 20, sumOdd: 25 });
 });
