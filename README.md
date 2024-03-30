@@ -11,7 +11,3 @@ sa acopar toare cazurile.
 
 Transformam programul intr-un graf orientat si alegem date de intrare astfel incat sa parcurgem
 fiecare ramura din arbore.
-
-## Testare cu Mutatii
-
-To do
