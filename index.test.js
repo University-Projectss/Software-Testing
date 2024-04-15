@@ -136,6 +136,33 @@ test("Functional Testing", () => {
   charToSearch = bigString[pos];
   expect(findChar(n, bigString, charToSearch)).toBe(pos);
 
+  ///////////
+  //frontiera
+  bigString = generateRandomString(1);
+  charToSearch = bigString[0];
+  expect(findChar(1, bigString, charToSearch)).toBe(0);
+
+  bigString = generateRandomString(20);
+  charToSearch = bigString[19];
+  expect(findChar(20, bigString, charToSearch)).toBe(19);
+
+  bigString = generateRandomString(1);
+  charToSearch = generateRandomString(1);
+  while (bigString.includes(charToSearch)) {
+    charToSearch = generateRandomString(1);
+  }
+  expect(findChar(1, bigString, charToSearch)).toBe("Character not found.");
+
+  bigString = generateRandomString(20);
+  charToSearch = generateRandomString(1);
+  while (bigString.includes(charToSearch)) {
+    charToSearch = generateRandomString(1);
+  }
+  expect(findChar(20, bigString, charToSearch)).toBe("Character not found.");
+
+  //frontiera
+  ///////////
+
   n = getRandomInt(1, 20);
   bigString = generateRandomString(n);
 
