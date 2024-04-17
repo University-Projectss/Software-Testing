@@ -21,15 +21,13 @@ const computeSum = (numbersArray) => {
     sumOdd = 0;
 
   for (let n of numbersArray) {
-    if (typeof n === "number") {
-      n = Math.floor(n);
-      if (n % 2 == 0) {
-        sumEven += n;
-      } else {
-        while (n) {
-          sumOdd += n % 10;
-          n = Math.floor(n / 10);
-        }
+    n = Math.floor(n);
+    if (n % 2 == 0) {
+      sumEven += n;
+    } else {
+      while (n) {
+        sumOdd += n % 10;
+        n = Math.floor(n / 10);
       }
     }
   }
