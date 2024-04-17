@@ -20,8 +20,11 @@ The length of the big string have to be between 1 and 20. So there are 3 classes
 We transform the program into a directed graph and choose input data so that we can go through it
 every branch of the tree.
 
+## Mutation Testing
+
+I used StrykerJS to generate mutants to ensure the quality of the tests. The report about them can be found under `reports/mutation/mutation.html`
+
 ## To Do
 
-- Mutanti
 - Generat teeste cu chatgpt si evaluat cat de bune sunt
 - De facut un graf pentru testarea structurala
