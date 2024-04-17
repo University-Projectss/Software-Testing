@@ -1,6 +1,4 @@
-//Testare functionala, structurala si cu mutatii
-
-// Gaseste un caracter intr un sir dat de lungime n
+// Find a character in a given string of lenght n
 const findChar = (n, bigString, charToSearch) => {
   if (n < 1 || n > 20) return null;
 
@@ -13,7 +11,7 @@ const findChar = (n, bigString, charToSearch) => {
   }
 };
 
-// Calculeaza suma numerelor pare si suma cifrelor numerelor impare dintr-un array dat
+// Compute the sum of the even numbers and the sum of the digits of odd numbers
 const computeSum = (numbersArray) => {
   if (numbersArray.length === 0) {
     return null;
@@ -23,13 +21,15 @@ const computeSum = (numbersArray) => {
     sumOdd = 0;
 
   for (let n of numbersArray) {
-    n = Math.floor(n); //lucram doar cu numere intregi
-    if (n % 2 == 0) {
-      sumEven += n;
-    } else {
-      while (n) {
-        sumOdd += n % 10;
-        n = Math.floor(n / 10);
+    if (typeof n === "number") {
+      n = Math.floor(n);
+      if (n % 2 == 0) {
+        sumEven += n;
+      } else {
+        while (n) {
+          sumOdd += n % 10;
+          n = Math.floor(n / 10);
+        }
       }
     }
   }

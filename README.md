@@ -24,7 +24,10 @@ every branch of the tree.
 
 I used StrykerJS to generate mutants to ensure the quality of the tests. The report about them can be found under `reports/mutation/mutation.html`
 
+## AI Generated Tests
+
+There are some tests that was generated with ChatGPT. The tests are good, writen in a better and more good looking way than my tests. The only issue was that it calculated sumOdd wrong for the last test, with 7 instead if 0. Other that that, good job GPT 🫡
+
 ## To Do
 
-- Generat teeste cu chatgpt si evaluat cat de bune sunt
 - De facut un graf pentru testarea structurala

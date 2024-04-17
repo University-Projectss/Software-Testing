@@ -185,3 +185,43 @@ test("Structural Testing", () => {
   expect(computeSum([])).toBe(null);
   expect(computeSum(testArray)).toStrictEqual({ sumEven: 20, sumOdd: 25 });
 });
+
+//ChatGPT generated tests
+describe("findChar function", () => {
+  it("should return the position of the character if found", () => {
+    const position = findChar(10, "Hello, World!", "o");
+    expect(position).toBe(4);
+  });
+
+  it('should return "Character not found." if the character is not found', () => {
+    const result = findChar(10, "Hello, World!", "x");
+    expect(result).toBe("Character not found.");
+  });
+
+  it("should return null if n is less than 1", () => {
+    const result = findChar(0, "Hello, World!", "o");
+    expect(result).toBeNull();
+  });
+
+  it("should return null if n is greater than 20", () => {
+    const result = findChar(21, "Hello, World!", "o");
+    expect(result).toBeNull();
+  });
+});
+
+describe("computeSum function", () => {
+  it("should compute the sum of even numbers and the sum of digits of odd numbers", () => {
+    const result = computeSum([12, 345, 678]);
+    expect(result).toEqual({ sumEven: 690, sumOdd: 12 });
+  });
+
+  it("should return null if the array is empty", () => {
+    const result = computeSum([]);
+    expect(result).toBeNull();
+  });
+
+  it("should ignore non-integer numbers", () => {
+    const result = computeSum([12, "abc", 34]);
+    expect(result).toEqual({ sumEven: 46, sumOdd: 0 });
+  });
+});
