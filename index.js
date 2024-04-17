@@ -2,13 +2,7 @@
 
 // Gaseste un caracter intr un sir dat de lungime n
 const findChar = (n, bigString, charToSearch) => {
-  if (
-    n < 1 ||
-    n > 20 ||
-    String(bigString).length !== n ||
-    typeof n !== "number"
-  )
-    return null;
+  if (n < 1 || n > 20) return null;
 
   const pos = String(bigString).indexOf(charToSearch);
 
@@ -42,8 +36,6 @@ const computeSum = (numbersArray) => {
 
   return { sumEven, sumOdd };
 };
-
-computeSum([1, 2, 3, 4]);
 
 module.exports = {
   findChar,
