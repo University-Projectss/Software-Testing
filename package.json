@@ -4,11 +4,17 @@
   "description": "Uni project to learn testing with jest",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:mutation": "stryker run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^8.2.6",
+    "@stryker-mutator/javascript-mutator": "^4.0.0",
+    "@stryker-mutator/jest-runner": "^8.2.6"
   }
 }

@@ -134,17 +134,23 @@ test("Functional Testing", () => {
   bigString = generateRandomString(n);
   let pos = getRandomInt(0, n - 1);
   charToSearch = bigString[pos];
-  expect(findChar(n, bigString, charToSearch)).toBe(pos);
+  expect(findChar(n, bigString, charToSearch)).toBe(
+    bigString.indexOf(charToSearch)
+  );
 
   ///////////
   //frontiera
   bigString = generateRandomString(1);
   charToSearch = bigString[0];
-  expect(findChar(1, bigString, charToSearch)).toBe(0);
+  expect(findChar(1, bigString, charToSearch)).toBe(
+    bigString.indexOf(charToSearch)
+  );
 
   bigString = generateRandomString(20);
   charToSearch = bigString[19];
-  expect(findChar(20, bigString, charToSearch)).toBe(19);
+  expect(findChar(20, bigString, charToSearch)).toBe(
+    bigString.indexOf(charToSearch)
+  );
 
   bigString = generateRandomString(1);
   charToSearch = generateRandomString(1);
