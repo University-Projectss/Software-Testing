@@ -27,3 +27,12 @@ I used StrykerJS to generate mutants to ensure the quality of the tests. The rep
 ## AI Generated Tests
 
 There are some tests that was generated with ChatGPT. The tests are good, writen in a better and more good looking way than my tests. The only issue was that it calculated sumOdd wrong for the last test, with 7 instead if 0. Other that that, good job GPT 🫡
+
+## To do
+
+- de imbunatatit documentatia pe testarea functionala, de explicat clasele ca in curs, frontiera si sa adaug mai multe teste pe frontiera
+- de documentat mai bine testele de la gpt, sa mentionez faptul ca nu a dat numarul minim de teste
+- bibliografie
+- de refacut referatul
+- de facut prezentarea + video-uri
+- sa arat cum erau mutantii initial si cum i am facut sa nu mai supravietuiasca niciunu
