@@ -48,9 +48,9 @@ Another issue is that it doesn't generated the minimum number of tests: if I rem
 
 ## Bibliography
 
-1. Jest, (https://jestjs.io/)[https://jestjs.io/]
-2. Mohsen Taleb, JavaScript unit testing frameworks in 2024: A comparison,(https://raygun.com/blog/javascript-unit-testing-frameworks/#jest:~:text=Used%20and%20recommended,if%20not%20minutes)[https://raygun.com/blog/javascript-unit-testing-frameworks/#jest:~:text=Used%20and%20recommended,if%20not%20minutes]
-3. Stryker, (https://stryker-mutator.io/)[https://stryker-mutator.io/]
+1. Jest, https://jestjs.io/
+2. Mohsen Taleb, JavaScript unit testing frameworks in 2024: A comparison, https://raygun.com/blog/javascript-unit-testing-frameworks/#jest:~:text=Used%20and%20recommended,if%20not%20minutes
+3. Stryker, https://stryker-mutator.io/
 
 ## To do
 
