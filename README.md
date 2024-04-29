@@ -4,9 +4,9 @@ University project to learn testing with Jest
 
 ## Why Jest?
 
-In JavaScript world, there are at leat 10 packages for everything you need, and testing is no exception. From the variety of testing libraries i choose to go with Jest.
+In JavaScript world, there are at leat 10 packages for everything you need, and testing is no exception. From the variety of testing libraries i choose to go with Jest[1].
 
-Jest is a library supported by the React dev team, which means there is a strong community around this library, which makes it easier to find solutions to problems. When a tool is backed up by a giant like Meta, there’s considerable extra comfort and peace of mind.
+Jest is a library supported by the React dev team, which means there is a strong community around this library, which makes it easier to find solutions to problems. When a tool is backed up by a giant like Meta, there’s considerable extra comfort and peace of mind.[2]
 
 ## Functional Testing
 
@@ -24,7 +24,15 @@ every branch of the tree.
 
 ## Mutation Testing
 
-I used StrykerJS to generate mutants to ensure the quality of the tests. The report about them can be found under `reports/mutation/mutation.html`
+I used StrykerJS[3] to generate mutants to ensure the quality of the tests. The report about them can be found under `reports/mutation/mutation.html`
+
+Initally there was 4 mutants that remain alive. In the image below you can see 3 of them with a red dot. Each of this lines was replaced with the `false` condition and survived.
+
+![mutants alive](https://github.com/rob3rtu/Testare/blob/main/mutantsLeft.png?raw=true)
+
+After I tried to solve those condition, I found out that those conditions where not necessary so I just deleted them :)
+
+The 4th mutants was just a function call used to make sure the function logic was correct and I forgot to remove it.
 
 ## Why Stryker
 
@@ -38,10 +46,14 @@ The tests are good, writen in a better and more good looking way than my tests. 
 
 Another issue is that it doesn't generated the minimum number of tests: if I remove 2-3 tests, the code coverage is still 100%.
 
+## Bibliography
+
+1. Jest, (https://jestjs.io/)[https://jestjs.io/]
+2. Mohsen Taleb, JavaScript unit testing frameworks in 2024: A comparison,(https://raygun.com/blog/javascript-unit-testing-frameworks/#jest:~:text=Used%20and%20recommended,if%20not%20minutes)[https://raygun.com/blog/javascript-unit-testing-frameworks/#jest:~:text=Used%20and%20recommended,if%20not%20minutes]
+3. Stryker, (https://stryker-mutator.io/)[https://stryker-mutator.io/]
+
 ## To do
 
 - de imbunatatit documentatia pe testarea functionala, de explicat clasele ca in curs, frontiera si sa adaug mai multe teste pe frontiera
-- bibliografie
 - de refacut referatul
 - de facut prezentarea + video-uri
-- sa arat cum erau mutantii initial si cum i am facut sa nu mai supravietuiasca niciunu
