@@ -32,7 +32,7 @@ Combining those we will obtain a total of 6 classes to write tests for
 
 ### Boundary Values
 
-    There are 2 boundaries for n, the lower one and the upper one. For the lower one we will choose the values 0, 1 and 2, and for the upper one 19, 20 and 21.
+There are 2 boundaries for n, the lower one and the upper one. For the lower one we will choose the values 0, 1 and 2, and for the upper one 19, 20 and 21.
 
 ## Structural Testing
 
@@ -67,7 +67,7 @@ Another issue is that it doesn't generated the minimum number of tests: if I rem
 
 ## Video Demo
 
-    Her you can find the [demo of the project](https://youtu.be/r_5SjuVSfTQ).
+Her you can find the [demo of the project](https://youtu.be/r_5SjuVSfTQ).
 
 ## Bibliography
 
