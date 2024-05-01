@@ -15,6 +15,25 @@ to cover all the cases.
 
 The length of the big string have to be between 1 and 20. So there are 3 classes for the iput data: less than 1, bigger than 20, or between 1 and 20. For the last class, there are 2 tests, when the search letter exists in the big string, and when it don't exist.
 
+So, there are the following classes:
+
+### Equivalence Partitioning for n
+
+    - N_1 = 1...20
+    - N_2 = { n | n < 1 }
+    - N_3 = { n | n > 20 }
+
+### Equivalence Partitioning for the searched character
+
+    - S_1 = yes, the character was found in the big string
+    - S_2 = no, the character was `not` found in the big string
+
+Combining those we will obtain a total of 6 classes to write tests for
+
+### Boundary Values
+
+    There are 2 boundaries for n, the lower one and the upper one. For the lower one we will choose the values 0, 1 and 2, and for the upper one 19, 20 and 21.
+
 ## Structural Testing
 
 We transform the program into a directed graph and choose input data so that we can go through it
@@ -54,6 +73,4 @@ Another issue is that it doesn't generated the minimum number of tests: if I rem
 
 ## To do
 
-- de imbunatatit documentatia pe testarea functionala, de explicat clasele ca in curs, frontiera si sa adaug mai multe teste pe frontiera
-- de refacut referatul
 - de facut prezentarea + video-uri

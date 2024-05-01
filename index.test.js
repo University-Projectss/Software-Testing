@@ -166,6 +166,22 @@ test("Functional Testing", () => {
   }
   expect(findChar(20, bigString, charToSearch)).toBe("Character not found.");
 
+  bigString = generateRandomString(n);
+  charToSearch = generateRandomString(1);
+  expect(findChar(0, bigString, charToSearch)).toBe(null);
+
+  bigString = generateRandomString(n);
+  charToSearch = generateRandomString(1);
+  expect(findChar(2, bigString, charToSearch)).toBe(null);
+
+  bigString = generateRandomString(n);
+  charToSearch = generateRandomString(1);
+  expect(findChar(19, bigString, charToSearch)).toBe(null);
+
+  bigString = generateRandomString(n);
+  charToSearch = generateRandomString(1);
+  expect(findChar(21, bigString, charToSearch)).toBe(null);
+
   //frontiera
   ///////////
 
@@ -190,17 +206,17 @@ test("Structural Testing", () => {
 describe("findChar function", () => {
   it("should return the position of the character if found", () => {
     const position = findChar(10, "Hello, World!", "o");
-    // expect(position).toBe(4);
+    expect(position).toBe(4);
   });
 
   it('should return "Character not found." if the character is not found', () => {
     const result = findChar(10, "Hello, World!", "x");
-    // expect(result).toBe("Character not found.");
+    expect(result).toBe("Character not found.");
   });
 
   it("should return null if n is less than 1", () => {
     const result = findChar(0, "Hello, World!", "o");
-    // expect(result).toBeNull();
+    expect(result).toBeNull();
   });
 
   it("should return null if n is greater than 20", () => {
