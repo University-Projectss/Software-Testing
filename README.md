@@ -65,6 +65,10 @@ The tests are good, writen in a better and more good looking way than my tests. 
 
 Another issue is that it doesn't generated the minimum number of tests: if I remove 2-3 tests, the code coverage is still 100%.
 
+## Video Demo
+
+    Her you can find the [demo of the project](https://youtu.be/r_5SjuVSfTQ).
+
 ## Bibliography
 
 1. Jest, https://jestjs.io/
@@ -73,4 +77,4 @@ Another issue is that it doesn't generated the minimum number of tests: if I rem
 
 ## To do
 
-- de facut prezentarea + video-uri
+- de facut prezentarea
