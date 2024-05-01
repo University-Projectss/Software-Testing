@@ -172,11 +172,11 @@ test("Functional Testing", () => {
 
   bigString = generateRandomString(n);
   charToSearch = generateRandomString(1);
-  expect(findChar(2, bigString, charToSearch)).toBe(null);
+  expect(findChar(2, bigString, charToSearch)).toBe("Character not found.");
 
   bigString = generateRandomString(n);
   charToSearch = generateRandomString(1);
-  expect(findChar(19, bigString, charToSearch)).toBe(null);
+  expect(findChar(19, bigString, charToSearch)).toBe("Character not found.");
 
   bigString = generateRandomString(n);
   charToSearch = generateRandomString(1);
